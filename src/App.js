@@ -56,13 +56,13 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Intro" component={IntroUserScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         {/* {!isLogin && (
           <Stack.Screen name="Login" component={LoginScreen} />
         )} */}
-        <Stack.Screen name="Home" component={HomeScreen} options={{ headerBackVisible: false }} />
+        <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="TenantLogin" component={TenantLoginScreen} />
         <Stack.Screen name="TenantSignup" component={TenantSignupScreen} />
         <Stack.Screen name="CustomerLogin" component={CustomerLogin} />
