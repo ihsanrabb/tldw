@@ -15,7 +15,7 @@ import { removeData } from '../utils/storage'
 
 const Tab = createBottomTabNavigator();
 
-function MenuScreen() {
+function ExploreScreen() {
   const [tenants, setTenants] = React.useState([]);
 
   React.useEffect(() => {
@@ -89,9 +89,10 @@ function ProfileScreen(props) {
 
 const Home = () => {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Menu" component={MenuScreen} options={{ headerShown: false }} />
-      <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
+    <Tab.Navigator options={{ headerShown: false }}>
+      <Tab.Screen name="Explore" component={ExploreScreen} />
+      {/* <Tab.Screen name="Menu" component={MenuScreen} /> */}
+      <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );
 }

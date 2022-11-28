@@ -22,7 +22,7 @@ const IntroUser = ({ navigation }) => {
   }
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={styles.containerView}>
       <PageSlider
         style={styles.pageSlider}
         selectedPage={selectedPage}
@@ -101,6 +101,10 @@ const IntroUser = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
+  containerView: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
   pageSlider: {
     width: '100%',
     flex: 1
